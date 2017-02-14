@@ -1,0 +1,303 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_cc9452d640aa4529a3e811d2f039c2d0 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_cc9452d640aa4529a3e811d2f039c2d0" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_cc9452d640aa4529a3e811d2f039c2d0 = L.map('map_cc9452d640aa4529a3e811d2f039c2d0', {
+                                           center:[40.7457277,-73.8521875],
+                                           zoom: 12,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_0e0e8dec2afe4368be15992625d21960 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_cc9452d640aa4529a3e811d2f039c2d0);
+
+        
+        
+            
+
+            var circle_marker_0b67dd763ed343369e2ad4a75600d0fd = L.circle(
+                [40.7553365,-73.8432452],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_cc9452d640aa4529a3e811d2f039c2d0);
+            
+        
+            
+            var popup_9e09c7e606ac4e318fbb1e4bfbe747fa = L.popup({maxWidth: '300'});
+
+            
+                var html_8ec3581c1dc8466f8204cdfc8c6c663e = $('         <div id="html_8ec3581c1dc8466f8204cdfc8c6c663e"                 style="width: 100.0%; height: 100.0%;">                 ROOSEVELT AVENUE &amp; 126 STREET</div>                 ')[0];
+                popup_9e09c7e606ac4e318fbb1e4bfbe747fa.setContent(html_8ec3581c1dc8466f8204cdfc8c6c663e);
+            
+
+            circle_marker_0b67dd763ed343369e2ad4a75600d0fd.bindPopup(popup_9e09c7e606ac4e318fbb1e4bfbe747fa);
+
+            
+        
+        
+            
+
+            var circle_marker_28c428b7bc264c8fa534c17e7aa1078e = L.circle(
+                [40.752541,-73.8526035],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_cc9452d640aa4529a3e811d2f039c2d0);
+            
+        
+            
+            var popup_1981226ff6844dc381c014aa06b21209 = L.popup({maxWidth: '300'});
+
+            
+                var html_7022574fcb6d4567912460f062b959d6 = $('         <div id="html_7022574fcb6d4567912460f062b959d6"                 style="width: 100.0%; height: 100.0%;">                 ROOSEVELT AVENUE &amp; 114 STREET</div>                 ')[0];
+                popup_1981226ff6844dc381c014aa06b21209.setContent(html_7022574fcb6d4567912460f062b959d6);
+            
+
+            circle_marker_28c428b7bc264c8fa534c17e7aa1078e.bindPopup(popup_1981226ff6844dc381c014aa06b21209);
+
+            
+        
+        
+            
+
+            var circle_marker_07ac3b41aba74ebd9acb76e9b5881918 = L.circle(
+                [40.7507179,-73.8587648],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_cc9452d640aa4529a3e811d2f039c2d0);
+            
+        
+            
+            var popup_366a51cf0c334738bbcdbfc879cd8058 = L.popup({maxWidth: '300'});
+
+            
+                var html_40c455251c864e739750693b7a5d4f6f = $('         <div id="html_40c455251c864e739750693b7a5d4f6f"                 style="width: 100.0%; height: 100.0%;">                 ROOSEVELT AVENUE &amp; 108 STREET</div>                 ')[0];
+                popup_366a51cf0c334738bbcdbfc879cd8058.setContent(html_40c455251c864e739750693b7a5d4f6f);
+            
+
+            circle_marker_07ac3b41aba74ebd9acb76e9b5881918.bindPopup(popup_366a51cf0c334738bbcdbfc879cd8058);
+
+            
+        
+        
+            
+
+            var circle_marker_7ef856de0b234ab38ee1b1cb4ef9bbea = L.circle(
+                [40.7453924,-73.9066122],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_cc9452d640aa4529a3e811d2f039c2d0);
+            
+        
+            
+            var popup_49249efe71da4a18a48db02dae1b74f5 = L.popup({maxWidth: '300'});
+
+            
+                var html_348e4bc3648249d28a1269e7b1abc70e = $('         <div id="html_348e4bc3648249d28a1269e7b1abc70e"                 style="width: 100.0%; height: 100.0%;">                 ROOSEVELT AVENUE &amp; 58 STREET</div>                 ')[0];
+                popup_49249efe71da4a18a48db02dae1b74f5.setContent(html_348e4bc3648249d28a1269e7b1abc70e);
+            
+
+            circle_marker_7ef856de0b234ab38ee1b1cb4ef9bbea.bindPopup(popup_49249efe71da4a18a48db02dae1b74f5);
+
+            
+        
+        
+            
+
+            var circle_marker_3512242eb9704bbc9792812da0f97753 = L.circle(
+                [40.763893,-73.9149938],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_cc9452d640aa4529a3e811d2f039c2d0);
+            
+        
+            
+            var popup_7d864a509730490192300c9f1fdf5528 = L.popup({maxWidth: '300'});
+
+            
+                var html_6584a95b0a094223827d803fd322a4a2 = $('         <div id="html_6584a95b0a094223827d803fd322a4a2"                 style="width: 100.0%; height: 100.0%;">                 STEINWAY STREET &amp; 30 AVENUE</div>                 ')[0];
+                popup_7d864a509730490192300c9f1fdf5528.setContent(html_6584a95b0a094223827d803fd322a4a2);
+            
+
+            circle_marker_3512242eb9704bbc9792812da0f97753.bindPopup(popup_7d864a509730490192300c9f1fdf5528);
+
+            
+        
+        
+        
+        </script>
+        
