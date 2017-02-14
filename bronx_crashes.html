@@ -1,0 +1,303 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_ca7f4a6cb20f45c3b41c7f2289b4cf06 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_ca7f4a6cb20f45c3b41c7f2289b4cf06" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_ca7f4a6cb20f45c3b41c7f2289b4cf06 = L.map('map_ca7f4a6cb20f45c3b41c7f2289b4cf06', {
+                                           center:[40.8516388,-73.9109747],
+                                           zoom: 12,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_54cc88d2b1e0452e91c595375588559f = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_ca7f4a6cb20f45c3b41c7f2289b4cf06);
+
+        
+        
+            
+
+            var circle_marker_c2a4c09017e54181b31166cd192f82cb = L.circle(
+                [40.8130953,-73.8982589],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_ca7f4a6cb20f45c3b41c7f2289b4cf06);
+            
+        
+            
+            var popup_1a0891d7197f484e8bbb0aa3ba698537 = L.popup({maxWidth: '300'});
+
+            
+                var html_68047a217c4642659389037cdd3532b5 = $('         <div id="html_68047a217c4642659389037cdd3532b5"                 style="width: 100.0%; height: 100.0%;">                 BRUCKNER BOULEVARD &amp; LEGGETT AVENUE</div>                 ')[0];
+                popup_1a0891d7197f484e8bbb0aa3ba698537.setContent(html_68047a217c4642659389037cdd3532b5);
+            
+
+            circle_marker_c2a4c09017e54181b31166cd192f82cb.bindPopup(popup_1a0891d7197f484e8bbb0aa3ba698537);
+
+            
+        
+        
+            
+
+            var circle_marker_fcfdff260b354c339a398621fba68014 = L.circle(
+                [40.8091071,-73.9228869],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_ca7f4a6cb20f45c3b41c7f2289b4cf06);
+            
+        
+            
+            var popup_8072a0d3745849a393ce151d55e626d8 = L.popup({maxWidth: '300'});
+
+            
+                var html_23ae096b63ae4bcc8731371addd9af60 = $('         <div id="html_23ae096b63ae4bcc8731371addd9af60"                 style="width: 100.0%; height: 100.0%;">                 EAST 138 STREET &amp; WILLIS AVENUE</div>                 ')[0];
+                popup_8072a0d3745849a393ce151d55e626d8.setContent(html_23ae096b63ae4bcc8731371addd9af60);
+            
+
+            circle_marker_fcfdff260b354c339a398621fba68014.bindPopup(popup_8072a0d3745849a393ce151d55e626d8);
+
+            
+        
+        
+            
+
+            var circle_marker_6b73173548844ce2b529f1a954f3d5dd = L.circle(
+                [40.8173878,-73.922758],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_ca7f4a6cb20f45c3b41c7f2289b4cf06);
+            
+        
+            
+            var popup_9096cf5f1a5e4a169d2fdb79c7a68383 = L.popup({maxWidth: '300'});
+
+            
+                var html_b0a94f25b44e40d5bcac92a8a5497e09 = $('         <div id="html_b0a94f25b44e40d5bcac92a8a5497e09"                 style="width: 100.0%; height: 100.0%;">                 EAST 149 STREET &amp; MORRIS AVENUE</div>                 ')[0];
+                popup_9096cf5f1a5e4a169d2fdb79c7a68383.setContent(html_b0a94f25b44e40d5bcac92a8a5497e09);
+            
+
+            circle_marker_6b73173548844ce2b529f1a954f3d5dd.bindPopup(popup_9096cf5f1a5e4a169d2fdb79c7a68383);
+
+            
+        
+        
+            
+
+            var circle_marker_c1961d1132c845158736ed735c03c5a3 = L.circle(
+                [40.8624442,-73.8971422],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_ca7f4a6cb20f45c3b41c7f2289b4cf06);
+            
+        
+            
+            var popup_3b11537adcaa4cc083a7ada6e583b904 = L.popup({maxWidth: '300'});
+
+            
+                var html_2ca7bec3a80940ac8e3323417c44e110 = $('         <div id="html_2ca7bec3a80940ac8e3323417c44e110"                 style="width: 100.0%; height: 100.0%;">                 EAST FORDHAM ROAD &amp; GRAND CONCOURSE</div>                 ')[0];
+                popup_3b11537adcaa4cc083a7ada6e583b904.setContent(html_2ca7bec3a80940ac8e3323417c44e110);
+            
+
+            circle_marker_c1961d1132c845158736ed735c03c5a3.bindPopup(popup_3b11537adcaa4cc083a7ada6e583b904);
+
+            
+        
+        
+            
+
+            var circle_marker_bcf5855bdb404ab6bcb29965e6753dd1 = L.circle(
+                [40.8593085,-73.8988389],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_ca7f4a6cb20f45c3b41c7f2289b4cf06);
+            
+        
+            
+            var popup_bf50706b69e94339aa2b190aa918c5dd = L.popup({maxWidth: '300'});
+
+            
+                var html_0648a1829ecd469099d119e382661034 = $('         <div id="html_0648a1829ecd469099d119e382661034"                 style="width: 100.0%; height: 100.0%;">                 GRAND CONCOURSE &amp; EAST 184 STREET</div>                 ')[0];
+                popup_bf50706b69e94339aa2b190aa918c5dd.setContent(html_0648a1829ecd469099d119e382661034);
+            
+
+            circle_marker_bcf5855bdb404ab6bcb29965e6753dd1.bindPopup(popup_bf50706b69e94339aa2b190aa918c5dd);
+
+            
+        
+        
+        
+        </script>
+        
