@@ -1,0 +1,303 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_0368e64923904c45a55544edc07db3e9 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_0368e64923904c45a55544edc07db3e9" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_0368e64923904c45a55544edc07db3e9 = L.map('map_0368e64923904c45a55544edc07db3e9', {
+                                           center:[40.5985712,-74.1191634],
+                                           zoom: 12,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_52ed8675dbd4480e8ca4443b08f656d3 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_0368e64923904c45a55544edc07db3e9);
+
+        
+        
+            
+
+            var circle_marker_5843179674194f7d97ccc5048870a965 = L.circle(
+                [40.6001833,-74.064639],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_0368e64923904c45a55544edc07db3e9);
+            
+        
+            
+            var popup_10dc7d02a4b1492386a2719f87332b8d = L.popup({maxWidth: '300'});
+
+            
+                var html_e5e1bb5673c146858a8161cff4806fbb = $('         <div id="html_e5e1bb5673c146858a8161cff4806fbb"                 style="width: 100.0%; height: 100.0%;">                 LILY POND AVENUE &amp; MAJOR AVENUE</div>                 ')[0];
+                popup_10dc7d02a4b1492386a2719f87332b8d.setContent(html_e5e1bb5673c146858a8161cff4806fbb);
+            
+
+            circle_marker_5843179674194f7d97ccc5048870a965.bindPopup(popup_10dc7d02a4b1492386a2719f87332b8d);
+
+            
+        
+        
+            
+
+            var circle_marker_1ce0a8a282b94a6ea30b47110d27f15f = L.circle(
+                [40.6434314,-74.0841429],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_0368e64923904c45a55544edc07db3e9);
+            
+        
+            
+            var popup_30f8dc3041454aaa9fe66adcdac07b6c = L.popup({maxWidth: '300'});
+
+            
+                var html_771d74241b5d4a059275c6803074087e = $('         <div id="html_771d74241b5d4a059275c6803074087e"                 style="width: 100.0%; height: 100.0%;">                 WESTERVELT AVENUE &amp; CRESCENT AVENUE</div>                 ')[0];
+                popup_30f8dc3041454aaa9fe66adcdac07b6c.setContent(html_771d74241b5d4a059275c6803074087e);
+            
+
+            circle_marker_1ce0a8a282b94a6ea30b47110d27f15f.bindPopup(popup_30f8dc3041454aaa9fe66adcdac07b6c);
+
+            
+        
+        
+            
+
+            var circle_marker_695dcc23262c4da18368130a80ca0f9c = L.circle(
+                [40.6261133,-74.0739765],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_0368e64923904c45a55544edc07db3e9);
+            
+        
+            
+            var popup_75a50a00e63b45ee8477a20fc1f7f089 = L.popup({maxWidth: '300'});
+
+            
+                var html_818760c1e2634d118425a830bc7515ba = $('         <div id="html_818760c1e2634d118425a830bc7515ba"                 style="width: 100.0%; height: 100.0%;">                 FRONT STREET &amp; THOMPSON STREET</div>                 ')[0];
+                popup_75a50a00e63b45ee8477a20fc1f7f089.setContent(html_818760c1e2634d118425a830bc7515ba);
+            
+
+            circle_marker_695dcc23262c4da18368130a80ca0f9c.bindPopup(popup_75a50a00e63b45ee8477a20fc1f7f089);
+
+            
+        
+        
+            
+
+            var circle_marker_30b57f403b4d4e608de6f9fc5e93aa4e = L.circle(
+                [40.6391762,-74.121823],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_0368e64923904c45a55544edc07db3e9);
+            
+        
+            
+            var popup_b4205eeee9424b9aad23bccf2f0ef2f0 = L.popup({maxWidth: '300'});
+
+            
+                var html_5259f949a62048498e414ffb144a0397 = $('         <div id="html_5259f949a62048498e414ffb144a0397"                 style="width: 100.0%; height: 100.0%;">                 RICHMOND TERRACE &amp; ALASKA STREET</div>                 ')[0];
+                popup_b4205eeee9424b9aad23bccf2f0ef2f0.setContent(html_5259f949a62048498e414ffb144a0397);
+            
+
+            circle_marker_30b57f403b4d4e608de6f9fc5e93aa4e.bindPopup(popup_b4205eeee9424b9aad23bccf2f0ef2f0);
+
+            
+        
+        
+            
+
+            var circle_marker_f521c673787542c49f1c5e1cc0099f00 = L.circle(
+                [40.5932214,-74.0665659],
+                200,
+                {
+                    color: 'red',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_0368e64923904c45a55544edc07db3e9);
+            
+        
+            
+            var popup_61642503f834414f96287ac8fc2707ca = L.popup({maxWidth: '300'});
+
+            
+                var html_40b870387f18445b8336581ca642fab9 = $('         <div id="html_40b870387f18445b8336581ca642fab9"                 style="width: 100.0%; height: 100.0%;">                 ROBIN ROAD &amp; MILLS AVENUE</div>                 ')[0];
+                popup_61642503f834414f96287ac8fc2707ca.setContent(html_40b870387f18445b8336581ca642fab9);
+            
+
+            circle_marker_f521c673787542c49f1c5e1cc0099f00.bindPopup(popup_61642503f834414f96287ac8fc2707ca);
+
+            
+        
+        
+        
+        </script>
+        
